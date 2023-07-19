@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "id-here",
+      "username": "username-here",
+      "balance": 1001
+    },
+    {
+      "id": "id-here",
+      "username": "username-here",
+      "balance": 500
+    }
+  ]
+}

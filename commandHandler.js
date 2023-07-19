@@ -1,6 +1,5 @@
 const fs = require('fs');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-
 const client = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
@@ -10,11 +9,9 @@ const client = new Client({
 	],
 });
 client.commands = new Collection();
-
 const commandFiles = fs
   .readdirSync('./commands')
   .filter((file) => file.endsWith('.js'));
-
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.data.name, command);
@@ -23,18 +20,14 @@ let repeatEnabled = false;
 let repeatUserID = '';
 let accumulationStarted = false;
 let messageContent = '';
-
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.application.commands.set(client.commands.map((cmd) => cmd.data));
 });
-
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isCommand()) return;
-
   const command = client.commands.get(interaction.commandName);
   if (!command) return;
-
   try {
     await command.execute(interaction);
   } catch (error) {
@@ -45,10 +38,8 @@ client.on('interactionCreate', async (interaction) => {
     });
   }
 });
-
 client.on('messageCreate', (message) => {
     const { content, author } = message;
-  
     if (content === '!Startchessgame' && !repeatEnabled) {
       repeatEnabled = true;
       repeatUserID = author.id;
@@ -72,5 +63,4 @@ client.on('messageCreate', (message) => {
       message.channel.send(response);
     }
   });
-
-client.login('token-here');
+client.login('bot-token-here');

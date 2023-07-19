@@ -13,7 +13,6 @@ const responses = [
     'https://rnz-ressh.cloudinary.com/image/upload/s--ER9S46Cj--/c_scale,f_auto,q_auto,w_1050/v1643780686/4MFIFWV_image_crop_117202',
     'https://scx2.b-cdn.net/gfx/news/2022/scientists-get-inventi.jpg',
   ];
-
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('pics')

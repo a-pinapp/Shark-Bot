@@ -1,16 +1,16 @@
 const { SlashCommandBuilder } = require('discord.js');
-const responses = [
-    'im sorry i don\'t have any money for you right now, maybe ask later?',
-    'oh sure i can give you money! here, have a dollar :dollar:',
-];
-
+const { updateUserBalance } = require('../userData');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('money')
-    .setDescription('if i have any money i can give you some'),
+    .setDescription('I can give you a money if I have it'),
   async execute(interaction) {
-    const randomIndex = Math.floor(Math.random() * responses.length);
-    const randomResponse = responses[randomIndex]
-    await interaction.reply({ content: randomResponse });
+    const randomNumber = Math.random();
+    if (randomNumber < 0.5) {
+      updateUserBalance(interaction.user.id, 1);
+      await interaction.reply(`Sure, have 1 money!`);
+    } else {
+      await interaction.reply(`I'm sorry, I don't have any moneys this time.`)
+    }
   },
 };
