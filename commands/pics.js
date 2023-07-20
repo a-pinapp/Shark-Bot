@@ -14,6 +14,7 @@ const responses = [
     'https://scx2.b-cdn.net/gfx/news/2022/scientists-get-inventi.jpg',
   ];
 module.exports = {
+  cooldown: 0,
   data: new SlashCommandBuilder()
     .setName('pics')
     .setDescription('see pics of me!'),

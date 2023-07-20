@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { getUserBalance, updateUserBalance } = require('../userData');
 module.exports = {
+    cooldown: 3600,
     data: new SlashCommandBuilder()
         .setName('rob')
         .setDescription('Rob another user of their moneys')

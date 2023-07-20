@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
+  cooldown: 0,
   data: new SlashCommandBuilder()
     .setName('motivation')
     .setDescription('get motivation for your swimming events from me!'),
