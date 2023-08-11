@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "id": "id-here",
-      "username": "username-here",
-      "balance": 1001
+      "id": "userid",
+      "username": "userusername",
+      "balance": 0
     },
     {
-      "id": "id-here",
-      "username": "username-here",
-      "balance": 500
+      "id": "userid",
+      "username": "userusername",
+      "balance": 597
     }
   ]
 }

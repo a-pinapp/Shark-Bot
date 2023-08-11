@@ -6,6 +6,9 @@ module.exports = {
     .setName('mine')
     .setDescription('Mine for resources'),
   async execute(interaction) {
+    if (!interaction.guild) {
+      return interaction.reply(`Sucks to suck ${interaction.user.username} No DM commands for u LMAO.`);
+    }
     const mineData = [
       { name: 'Stone', value: 2, probability: 0.3 },
       { name: 'Iron Ore', value: 8, probability: 0.25 },
@@ -28,7 +31,7 @@ module.exports = {
     }
     updateUserBalance(interaction.user.id, caughtMine.value)
     const message = caughtMine
-      ? `You found ${caughtMine.name} worth ${caughtMine.value}!`
+      ? `You found ${caughtMine.name} worth ${caughtMine.value} moneys!`
       : `You didn't find anything this time.`;
     await interaction.reply(message);
   },

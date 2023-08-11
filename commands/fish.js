@@ -6,6 +6,9 @@ module.exports = {
     .setName('fish')
     .setDescription('Catch a fish'),
   async execute(interaction) {
+    if (!interaction.guild) {
+      return interaction.reply(`Sucks to suck ${interaction.user.username} xD No DM commands for u LMAO`);
+    }
     const fishData = [
       { name: 'Salmon', value: 5, probability: 0.1 },
       { name: 'Trout', value: 3, probability: 0.15 },
@@ -31,7 +34,7 @@ module.exports = {
     }
     updateUserBalance(interaction.user.id, caughtFish.value);
     const message = caughtFish
-      ? `You caught a ${caughtFish.name} worth ${caughtFish.value}!`
+      ? `You caught a ${caughtFish.name} worth ${caughtFish.value} moneys!`
       : `You didn't catch anything this time.`;
     await interaction.reply(message);
   },

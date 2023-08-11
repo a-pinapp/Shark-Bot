@@ -5,7 +5,6 @@ module.exports = {
     .setName('schedule')
     .setDescription('in case you forget the schedule'),
   async execute(interaction) {
-    const scheduleMessage = `swim schedule here`;
-    await interaction.reply(scheduleMessage);
+    await interaction.reply('uh schedule');
   },
 };

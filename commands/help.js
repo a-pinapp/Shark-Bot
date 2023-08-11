@@ -14,6 +14,8 @@ module.exports = {
     /times (check socal swimming time standards)
     /motivation (get motivation from me)
     /chess (play chess with me)
+    /calculate (calculate a math problem)
+    /records (see server swimming records)
 
     Economy commands
     /balance (check how much moneys you have)

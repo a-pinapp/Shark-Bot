@@ -81,4 +81,4 @@ client.on('messageCreate', (message) => {
       message.channel.send(response);
     }
   });
-client.login('bot-token-here');
+client.login('bottoken');

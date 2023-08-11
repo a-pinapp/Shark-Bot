@@ -20,6 +20,16 @@ function updateUserBalance(userId, amount) {
         saveUserData(userData);
     }
 }
+function setUserBalance(userId, newBalance) {
+    const userData = getUserData();
+    const user = userData.users.find((user) => user.id === userId);
+    if (user) {
+      user.balance = newBalance;
+    } else {
+      userData.users.push({ id: userId, balance: newBalance });
+    }
+    saveUserData(userData);
+  }  
 function getAllUserBalances() {
     const userData = getUserData();
     return userData.users.map((user) => ({
@@ -29,6 +39,7 @@ function getAllUserBalances() {
 }
 module.exports = {
     getUserBalance,
-    updateUserBalance,
-    getAllUserBalances
+    setUserBalance,
+    getAllUserBalances,
+    updateUserBalance
 };

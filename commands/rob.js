@@ -11,10 +11,13 @@ module.exports = {
                 .setDescription('The user you want to rob')
                 .setRequired(true)),
     async execute(interaction) {
+        if (!interaction.guild) {
+            return interaction.reply(`Sucks to suck ${interaction.user.username} No DM commands for u LMAO.`);
+        }
         const targetUser = interaction.options.getUser('victim');
         const targetBalance = getUserBalance(targetUser.id);
         if (targetBalance <= 0) {
-            await interaction.reply(`The target user does not have any moneys to steal.`)
+            await interaction.reply(`The target user does not have any moneys to steal.`);
         }
         const randomNumber = Math.random();
         if (randomNumber < 0.5) {
