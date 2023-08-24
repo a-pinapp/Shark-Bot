@@ -1,14 +1,99 @@
 {
   "users": [
     {
-      "id": "userid",
-      "username": "userusername",
+      "id": "1099864210982326334",
+      "username": ".definitely.someone.",
       "balance": 0
     },
     {
-      "id": "userid",
-      "username": "userusername",
+      "id": "905144859873128458",
+      "username": "briioche.",
       "balance": 597
+    },
+    {
+      "id": "1128763400206426143",
+      "username": "greenpinapp",
+      "balance": 0
+    },
+    {
+      "id": "898801381966741534",
+      "username": "ion",
+      "balance": 0
+    },
+    {
+      "id": "602769841987780611",
+      "username": "jello0999",
+      "balance": 0
+    },
+    {
+      "id": "1071899065039728780",
+      "username": "John00123",
+      "balance": 0
+    },
+    {
+      "id": "591112173850329121",
+      "username": "lilgoblin_",
+      "balance": 0
+    },
+    {
+      "id": "266776652774637569",
+      "username": "nacl_bae",
+      "balance": 40723263769231
+    },
+    {
+      "id": "808445593344933898",
+      "username": "ohio_booty_tickler",
+      "balance": 29088045497354
+    },
+    {
+      "id": "749309826164850839",
+      "username": "omii",
+      "balance": 0
+    },
+    {
+      "id": "692550309414699018",
+      "username": "pinapp",
+      "balance": 735121867442780700
+    },
+    {
+      "id": "559880885881536533",
+      "username": "potatoling",
+      "balance": 0
+    },
+    {
+      "id": "957112597147156521",
+      "username": "purplemonkey",
+      "balance": 0
+    },
+    {
+      "id": "292853767718699008",
+      "username": "s.amantha",
+      "balance": 0
+    },
+    {
+      "id": "931703729558786088",
+      "username": "skyleroda",
+      "balance": 1018440454286742
+    },
+    {
+      "id": "586686129693261824",
+      "username": "spiny1000",
+      "balance": 0
+    },
+    {
+      "id": "875247357883715584",
+      "username": "taco eater",
+      "balance": 0
+    },
+    {
+      "id": "843882569955409941",
+      "username": "theseventhlion",
+      "balance": 58673833802
+    },
+    {
+      "id": "1121566558074974318",
+      "username": "visevise",
+      "balance": 0
     }
   ]
 }

@@ -1,9 +1,11 @@
 const { SlashCommandBuilder } = require('discord.js');
+
 module.exports = {
   cooldown: 0,
   data: new SlashCommandBuilder()
     .setName('help')
     .setDescription('see my commands :D'),
+    
   async execute(interaction) {
     const helpMessage = `me commands:
     General commands
@@ -16,6 +18,10 @@ module.exports = {
     /chess (play chess with me)
     /calculate (calculate a math problem)
     /records (see server swimming records)
+    /flip (flip a coin, heads or tails)
+    /rateme (rate you out of 10)
+    /apologize (make me apologize)
+    /anon (anonymously send a message)
 
     Economy commands
     /balance (check how much moneys you have)
